@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Search Request
+{% endblock title %}
+
+{% block body %}
+<center>
+{% if searched %}
+    <h1>Search Results for <font color="red">"{{searched}}"</font></h1><br>
+     <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 well mt-4" style="text-align:center">
+            <b>{{product.name}}</b>
+            <br>
+            <p>{{product.description}}</p><br>
+            <img src={{product.imglink}} style="width: 220px; height: 180px;"><br>
+            <span class ="badge bg-primary">Rs.{{product.price}}</span><br><br>
+            <form method = "post" action="/">
+                {% csrf_token %}
+                <input type="submit" value="Add to Cart!" class="btn btn-success">
+                <input type="hidden" name="obj_id" value={{product.id}}>
+                
+            </form>
+            </div>
+            {% endfor %}
+        </div><br><br>
+        <center><a class="btn btn-danger" onclick ="window.location='/'">Return to Home Page</a></center><br><br>
+{% else %}
+    <h1>Please enter a valid Search Query !!</h1>
+{% endif %}
+</center>
+{%endblock body%}

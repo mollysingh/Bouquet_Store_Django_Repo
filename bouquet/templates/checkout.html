@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script src= "http://code.jquery.com/jquery-2.1.1.js"> </script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+		
+	<style type = "text/css">
+	.centerdv
+	{
+			width: 45%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+	}
+	.formdiv
+	{
+		width: 50%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
+	<div class = "container centerdv">
+		<h3>Total Price:<br><br><span class="badge bg-secondary"><font size=4>Rs.{{total_price}}</font></span></h3>
+		<div class = "well">
+
+			<form method = "post" action = "place/" class = "formdiv">
+				{% csrf_token %}
+				<h4>Billing Information</h4>
+					<b>First Name:</b>
+					<input name = "first_name" class = "form-control"/>
+					<br>
+					<b>Last Name:</b>
+					<input name = "last_name" class = "form-control"/>
+					<br>
+					<b>Address:</b>
+					<input name = "address" class = "form-control">
+					<br>
+					<b>City</b>
+					<input name = "city" class = "form-control">
+					<br>
+					<h4>Payment Information</h4>
+							<br>
+							<b> Payment Type: </b>
+							<br>
+							<input type="radio" name="payment" value="paypal">Paypal
+							<br>
+							<input type="radio" name="payment" value="credit_card">Credit Card
+							<br>
+							<b>Paypal Email/ CC Number</b>
+							<input type = "text" class = "form-control" name = "payment_data">
+							<b>
+
+					<input type = "submit" value = "Complete Order" class = "btn btn-success">
+			</form>
+
+
+		</div>
+	</div>
+</body>
+</html>

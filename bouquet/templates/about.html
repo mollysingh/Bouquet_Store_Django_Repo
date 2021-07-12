@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block body %}
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .container {
+  max-width: 960px;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+
+<main>
+  <div class="position-relative overflow-hidden px-0 p-md-0 m-md-0 text-center bg-light" style="background-image: url('/static/ab1.jfif');">
+    <div class="col-md-5 p-lg-5 mx-auto my-5 px-0">
+      <h1 class="display-4 fw-normal">Welcome to the Bouquet Store !!</h1>
+      <p class="lead fw-normal">We offer a great range of your favourite bouquets of the most alluring and delighful blossoms, delivered at your doorstep. Explore our store here.</p>
+      <a class="btn btn-outline-dark" onclick ="window.location='/'">Explore</a>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Founder</h2>
+        <p class="lead">MOLLY SINGH, Web Developer</p>
+      </div>
+      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 500px; border-radius: 21px 21px 0 0;background-image: url('/static/molls.jpg');"></div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Foundation Stones</h2>
+        <p class="lead">Planning, Processing, Executing</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 500px; border-radius: 21px 21px 0 0;">
+      <font color="white"><p><br><br>
+      The basic intention behind this project implementation was to facilitate the doorstep delivery of beautiful bouquets due to the present condition of a worldwide pandemic.<br><br>
+      In these ongoing difficult times, we intend to spread happiness with these eye-catching beauties which add more colours to the celebrations of all kinds.<br><br>
+      We have recorded a surprising rise in the number of requests and orders placed on a daily basis, which is a clear indication that the users find our website interesting.<br><br>
+      <font size=5>Happy Shopping everyone :)</font>
+       </p></font>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Best Seller</h2>
+        <p class="lead">Red Rose Basket</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 500px; border-radius: 21px 21px 0 0;">
+      <img src="/static/redrosebasket.jfif" height=500px width=450px>
+      </div>
+    </div>
+    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Best Seller</h2>
+        <p class="lead">Yellow Rose-White Calla Lily</p>
+      </div>
+      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 500px; border-radius: 21px 21px 0 0;">
+      <img src="/static/yellowrosewhitecallalily.jfif" height=500px width=450px>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Contact Us</h2>
+        <p class="lead">Bouquet Store Contact Details</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <font color="black">
+      <br><br><b>Email :</b> bouquet_store631@yahoo.com<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bouquet_store631@gmail.com<br><br>
+      <b>Contact Number:</b> 4587548512<br><br>
+      You can also contact us on our different social media handles.<br><br>
+      Link Soon. Stay Tuned !!
+      
+      </font>
+      </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Customer Feedback</h2>
+        <p class="lead">Enrich us with your valuable feedback</p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><br><br><br>
+      <font color="white">To fill the feedback form and contact us -<br><br></font>
+      <a class="btn btn-outline-light" onclick ="window.location='/contact'">Click Here</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      
+  </body>
+{%endblock body%}

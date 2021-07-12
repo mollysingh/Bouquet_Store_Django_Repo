@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}
+My Cart
+{% endblock title %}
+
+{% block body %}
+<style type="text/css">
+        
+        .centerdv
+        {
+            width:45%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:10px;
+            text-align:center;
+        }
+        .imgscale
+        {
+            max-width: 70px;
+            max-height: 70px;
+        }
+
+        
+        </style>
+
+        <div class="jumbotron centerdv "><div class="jumbotron">
+            <div><br>
+                <h2>Total Price:<br><br><span class="badge bg-secondary">Rs.{{total_price}}</span></h2>
+                <br>
+                {% for item in cart_items %}
+                <div class = "media">
+                    <div align="left" href="#" style="float: left; width:10%">
+                        <img class="media-object imgscale" src={{item.imglink}} />
+                    </div>
+                    <div class="media-body">
+                        <font size=4>{{item.name}}</font>
+                        <div align="right"><font color="blue"><b>Rs.{{item.price}}</b></font></div>
+                        
+                        
+                    </div>
+                    <form method="post" action="remove/">
+                        {% csrf_token %}
+                        <input type="hidden" name="obj_id" value={{item.id}}/>
+                        <div align="right"><input type="submit" value="Remove"  class="btn btn-danger"></div>
+                    </form>
+                </div>
+                {% endfor %}
+            <br><button class = "btn btn-success btn-lg" onclick = "window.location = '/cart/checkout';">Checkout</button>  
+            </div>
+        </div></div>
+{% endblock body %}
